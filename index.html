@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Image Editor</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript">
+    </script>
+</head>
+
+<body>
+    <div id="page">
+        <div class="header">
+
+            <button id="new" type="button" class="btn btn-default" onclick="newCanvas()">Clean</button>
+            <form class="form-inline">
+                <div class="form-group">
+                    <label class="sr-only" for="exampleInputAmount">line width (in pixels)</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="exampleInput" value="" placeholder="line width">
+                        <div class="input-group-addon">px</div>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary" id="getVal">Add</button>
+            </form>
+        </div>
+
+        <div id="content">
+            <p style="text-align:center">Loading Canvas...</p>
+        </div>
+        <div class="footer">
+            <div class="palette-case">
+                <div class="palette-box">
+                    <div class="palette white" onclick="selectColor(this)"></div>
+                </div>
+                <div class="palette-box">
+                    <div class="palette red" onclick="selectColor(this)"></div>
+                </div>
+                <div class="palette-box">
+                    <div class="palette blue" onclick="selectColor(this)"></div>
+                </div>
+                <div class="palette-box">
+                    <div class="palette green" onclick="selectColor(this)"></div>
+                </div>
+                <div class="palette-box">
+                    <div class="palette black" onclick="selectColor(this)"></div>
+                </div>
+                <div style="clear:both"></div>
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
